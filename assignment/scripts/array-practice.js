@@ -69,7 +69,7 @@ animalArray.unshift('walrus');
 console.log(`Added an animal to beginning: ${animalArray}`);
 
 // 4.c. TODO: Add a food at the beginning of the array & log the array
-favoriteFoods.unshift('licorice');
+favoriteFoods.unshift('Licorice');
 console.log(favoriteFoods);
 
 // Example: Remove the first animal using Array.shift
@@ -91,14 +91,25 @@ console.log(favoriteFoods);
 
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
-
+favoriteFoods.sort();
+favoriteFoods.reverse();
+console.log(favoriteFoods);
 
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
+let arrayString;
+for (food of favoriteFoods){
+arrayString += food + ' and ';
+}
+arrayString.shift();
+console.log(arrayString);
+//I just wanted to try this in a more automated way than, I will still need to remove the undefined value, and the last 'and' in the string
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+let newArray = favoriteFoods + ',' + animalArray;
+console.log(newArray);
